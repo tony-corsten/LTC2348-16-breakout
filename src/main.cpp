@@ -11,8 +11,6 @@
 // function definitions
 void serial_wait_command(uint8_t);
 // constant definitions
-const int chipSelect = BUILTIN_SDCARD;
-bool switchVal = false;
 unsigned int timeStartTick = 0;
 int timeTotalTick = 0;
 unsigned int timeEndTick = 0;
@@ -22,6 +20,7 @@ unsigned int grand_total_loops = 0;
 char readBuffer[20];
 bool write_data = true;
 bool first_loop = true;
+
 void setup()
 {
   Serial.begin(921600);
